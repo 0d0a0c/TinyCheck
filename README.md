@@ -56,21 +56,23 @@ It is worthy to note that not all configuration options are editable from the ba
 ### Installation
 Modified installation to get it installed on arm v6:
 
-#### to run TinyCheck on armv6 raspberry pi
-
 #### download and install older nodejs
-wget https://nodejs.org/dist/latest-v10.x/node-v10.23.0-linux-armv6l.tar.xz
-tar -xJf node-v10.23.0-linux-armv6l.tar.xz
 
-cd node-v10.23.0-linux-armv6l/
-sudo cp -R * /usr/local/
+```console
+$ wget https://nodejs.org/dist/latest-v10.x/node-v10.23.0-linux-armv6l.tar.xz 
+$ tar -xJf node-v10.23.0-linux-armv6l.tar.xz 
+$ cd node-v10.23.0-linux-armv6l/ 
+$ sudo cp -R * /usr/local/ 
+```
 
 #### modified installation of Tinycheck here is identical apart from install.sh modifications in this git
-$ cd /tmp
-$ git clone https://github.com/0d0a0c/TinyCheck.git     # modified
+
+```console
+$ cd /tmp 
+$ git clone https://github.com/0d0a0c/TinyCheck.git 
 $ cd Tinycheck    
 $ sudo bash install.sh 
-
+```
 
 
 
