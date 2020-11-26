@@ -345,8 +345,8 @@ if [[ $EUID -ne 0 ]]; then
 else
     welcome_screen
     check_operating_system
-    check_connection
-    check_wlan_interfaces
+    #check_connection
+    #check_wlan_interfaces
     create_directory
     check_dependencies
     configure_dnsmask
