@@ -1,4 +1,6 @@
-# TinyCheck
+# TinyCheck modified for ARMv6 (pi zero w etc)
+### Modifications
+Mostly the same as the original with a few minor tweaks in the installation procedure and the install.sh script. As beautiful as Tinycheck is, I want to strip it down a bit and see if I can run it on absolute bare minimum hardware, or get it to work even if very slowly.
 
 ### Description
 
@@ -52,7 +54,27 @@ The backend and the frontend are quite similar. Both consist of a [VueJS](https:
 It is worthy to note that not all configuration options are editable from the backend (such as default ports, Free certificates issuers etc.). Don't hesitate to take a look at the `config.yaml` file to tweak some configuration options.
 
 ### Installation
+Modified installation to get it installed on arm v6:
 
+#### to run TinyCheck on armv6 raspberry pi
+
+#### download and install older nodejs
+wget https://nodejs.org/dist/latest-v10.x/node-v10.23.0-linux-armv6l.tar.xz
+tar -xJf node-v10.23.0-linux-armv6l.tar.xz
+
+cd node-v10.23.0-linux-armv6l/
+sudo cp -R * /usr/local/
+
+#### modified installation of Tinycheck here is identical apart from install.sh modifications in this git
+$ cd /tmp
+$ git clone https://github.com/0d0a0c/TinyCheck.git     # modified
+$ cd Tinycheck    
+$ sudo bash install.sh 
+
+
+
+
+Original Installation procedure below:
 Prior the TinyCheck installation, you need to have:
 
 - A Raspberry Pi with [Raspberry Pi OS](https://www.raspberrypi.org/documentation/installation/installing-images/) (or any computer with a Debian-like system)
@@ -62,7 +84,7 @@ Prior the TinyCheck installation, you need to have:
 
 ```console
 $ cd /tmp/
-$ git clone https://github.com/0d0a0c/TinyCheck.git
+$ git clone https://github.com/KasperskyLab/TinyCheck
 $ cd TinyCheck
 $ sudo bash install.sh
 ```
