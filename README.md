@@ -62,7 +62,7 @@ Prior the TinyCheck installation, you need to have:
 
 ```console
 $ cd /tmp/
-$ git clone https://github.com/KasperskyLab/TinyCheck
+$ git clone https://github.com/0d0a0c/TinyCheck.git
 $ cd TinyCheck
 $ sudo bash install.sh
 ```
